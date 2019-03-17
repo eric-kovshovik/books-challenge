@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import auth0Client from '../Auth';
 
@@ -27,7 +27,7 @@ class SubmitAnswer extends Component {
   render() {
     if (!auth0Client.isAuthenticated()) return null;
     return (
-      <Fragment>
+      <>
         <div className="form-group text-center">
           <label htmlFor="exampleInputEmail1">Answer:</label>
           <input
@@ -44,7 +44,7 @@ class SubmitAnswer extends Component {
           Submit
         </button>
         <hr className="my-4" />
-      </Fragment>
+      </>
     )
   }
 }
